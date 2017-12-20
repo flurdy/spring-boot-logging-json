@@ -33,8 +33,9 @@ bintray {
     pkg {
         repo = 'maven'
         name = 'spring-boot-logging-json'
+        vcsUrl = 'https://github.com/flurdy/spring-boot-logging-json.git'
         version {
-            name = "0.1"
+            name = "1.0"
         }
     }
 }
