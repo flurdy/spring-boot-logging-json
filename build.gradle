@@ -29,7 +29,7 @@ repositories {
 
 bintray {
     user = 'flurdy'
-    key = System.getenv('BINTRAY_KEY')
+    key = System.getenv('BINTRAY_API_KEY')
     pkg {
         repo = 'maven'
         name = 'spring-boot-logging-json'
