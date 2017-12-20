@@ -3,20 +3,40 @@ import java.util.concurrent.Callable
 import static java.util.Optional.ofNullable
 import static java.util.concurrent.Executors.newSingleThreadExecutor
 
-group 'com.flurdy'
 
 buildscript {
     repositories {
+        jcenter()
         mavenCentral()
     }
+}
+
+plugins {
+    id "com.jfrog.bintray" version "1.7.3"
 }
 
 apply plugin: 'java'
 
 sourceCompatibility = 1.8
 
+group = 'com.flurdy'
+version = '1.0'
+
 repositories {
+    jcenter()
     mavenCentral()
+}
+
+bintray {
+    user = 'flurdy'
+    key = System.getenv('BINTRAY_KEY')
+    pkg {
+        repo = 'maven'
+        name = 'spring-boot-logging-json'
+        version {
+            name = "0.1"
+        }
+    }
 }
 
 jar {
@@ -32,4 +52,3 @@ dependencies {
     compile 'ch.qos.logback:logback-access:1.2.3'
     compile 'net.logstash.logback:logstash-logback-encoder:4.11'
 }
-
