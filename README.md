@@ -11,6 +11,8 @@ Builds at https://circleci.com/gh/flurdy/spring-boot-logging-json
 
 Jars at https://bintray.com/flurdy/maven/spring-boot-logging-json
 
+In maven:
+
     <repository>
       <snapshots>
         <enabled>false</enabled>
@@ -27,3 +29,18 @@ Jars at https://bintray.com/flurdy/maven/spring-boot-logging-json
       <artifactId>spring-boot-logging-json</artifactId>
       <version>1.0</version>
     </dependency>
+
+In Gradle:
+
+
+    repositories {
+        maven { 
+            url "https://dl.bintray.com/flurdy/maven" 
+        }
+    }
+
+
+    dependencies {
+        compile 'com.flurdy:spring-boot-logging-json:1.0'
+    }
+
