@@ -22,7 +22,7 @@ apply plugin: 'maven-publish'
 sourceCompatibility = 1.8
 
 group = 'com.flurdy'
-version = '1.0'
+version = '1.1'
 
 repositories {
     jcenter()
@@ -56,8 +56,17 @@ publishing {
   }
 }
 
+task testJar(type: Jar, dependsOn: testClasses) {
+    classifier = 'tests'
+    from sourceSets.test.output
+}
+
 jar {
     baseName = 'spring-boot-logging-json'
+}
+
+artifacts {
+    archives testJar
 }
 
 dependencies {
