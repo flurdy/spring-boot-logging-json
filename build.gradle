@@ -60,8 +60,8 @@ publishing {
 }
 
 task testJar(type: Jar, dependsOn: testClasses) {
-//    classifier = 'tests'
-    baseName = "${project.archivesBaseName}-tests"
+    classifier = 'tests'
+    baseName = 'spring-boot-logging-json'
     from sourceSets.test.output
 }
 
