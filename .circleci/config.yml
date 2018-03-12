@@ -36,11 +36,11 @@ jobs:
       - save_cache:
           paths:
             - ~/.gradle
-          key: v1-dependencies-{{ checksum "build.gradle" }}
+          key: v1-dependencies-{{ checksum "build.gradle" }}-{{ epoch }}
 
       - run: gradle build
 
       - store_artifacts:
-         path: target/spring-boot-logging-json-1.0.jar
+         path: build/libs
 
-      - run: gradle bintrayUpload   
+      - run: gradle bintrayUpload

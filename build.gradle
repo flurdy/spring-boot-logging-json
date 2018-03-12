@@ -52,6 +52,9 @@ publishing {
           groupId = project.group
           artifactId = project.archivesBaseName
           version = project.version
+//          artifact sourcesJar
+//          artifact javadocJar
+          artifact testJar
       }
   }
 }
