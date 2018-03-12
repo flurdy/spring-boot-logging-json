@@ -40,7 +40,7 @@ bintray {
         name = 'spring-boot-logging-json'
         vcsUrl = 'https://github.com/flurdy/spring-boot-logging-json.git'
         version {
-            name = "1.0"
+            name = "1.1"
         }
     }
 }
