@@ -61,6 +61,7 @@ publishing {
 
 task testJar(type: Jar, dependsOn: testClasses) {
     classifier = 'tests'
+    baseName = project.archivesBaseName
     from sourceSets.test.output
 }
 
